@@ -1,6 +1,6 @@
 import unittest
 from icontract_hypothesis import test_with_inferred_strategy
-from petlja.sums_before_and_after_max import sums_before_and_after_max, difference_of_sums_before_and_after_max
+from petlja.sums_before_and_after_max import sums_before_and_after_max, sums_before_and_after_max_library, difference_of_sums_before_and_after_max
 
 
 class TestSumsBeforeAndAfterMax(unittest.TestCase):
@@ -13,7 +13,10 @@ class TestSumsBeforeAndAfterMax(unittest.TestCase):
         self.assertEqual(result, -14)
 
     def test_verify_with_icontract_hypothesis(self) -> None:
-        test_with_inferred_strategy(difference_of_sums_before_and_after_max)
+        test_with_inferred_strategy(sums_before_and_after_max)
+
+    def test_verify_with_icontract_hypothesis_library(self) -> None:
+        test_with_inferred_strategy(sums_before_and_after_max_library)
     
 
 if __name__ == "__main__":
