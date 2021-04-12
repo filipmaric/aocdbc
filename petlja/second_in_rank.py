@@ -1,5 +1,6 @@
 # Given a list of points of students in a programming contest,
 # determine the number of points of the second student in the list
+# when the list is sorted in descending order of points
 
 from icontract import ensure, require
 from typing import List
